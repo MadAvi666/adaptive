@@ -118,6 +118,7 @@ main {
   top: 60px;
   display: none;
   right: 12px;
+  z-index: 10;
 }
 
 .drop-list.opened {
