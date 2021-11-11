@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  margin-bottom: 20px;
+  display: flex;
+  width: 100%;
+  background-color: aqua;
+  height: 60px;
+  justify-content: center;
+  position: relative;
+}
+
+.header-nav {
+  width: 350px;
+  display: flex;
+}
+
+.header-nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-nav li {
+  width: 75px;
+  background-color: black;
+  height: 15px;
+}
+
+.header-container {
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  position: relative;
+}
+
+.header-logo {
+  background-color: black;
+  width: 100px;
+  height: 20px;
+}
+
+.header-authorize {
+  background-color: black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.hamburger {
+  width: 20px;
+  height: 20px;
+  display: none;
+  background-color: black;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.frame-1 {
+  width: 30%;
+  height: 350px;
+  background-color: blue;
+  border-radius: 10px;
+  position: relative;
+}
+
+.frame-1::before {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  content: "";
+  position: absolute;
+  display: block;
+  top: 5px;
+  right: 5px;
+}
+
+.frame-2 {
+  width: 40%;
+  height: 250px;
+  background-color: blue;
+  border-radius: 10px;
+}
+
+.content-container {
+  padding: 0 10px;
+  justify-content: space-around;
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.drop-list {
+  position: absolute;
+  width: 90px;
+  height: 150px;
+  background-color: rgb(231, 231, 222);
+  border-radius: 13px;
+  border: 1px black solid;
+  top: 60px;
+  display: none;
+  right: 12px;
+}
+
+.drop-list.opened {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .content-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .frame-1 {
+    width: 60%;
+    margin: 15px 0;
+  }
+
+  .frame-2 {
+    width: 80%;
+    margin: 15px 0;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  .header-authorize {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
